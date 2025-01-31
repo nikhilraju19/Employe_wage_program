@@ -17,5 +17,5 @@ def cal_emp_daily_wage():
 		daily_wage = 0
 		print(f"The employee is absent and his daily wage is: {daily_wage}")
 
-if __name__ == "__main__":
+if __name__ == " __main__ ":
 	cal_emp_daily_wage()
