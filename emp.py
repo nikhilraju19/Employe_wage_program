@@ -6,11 +6,18 @@ def chk_attd():
 
 def monthly_wage():
     total_monthly_wage = 0
-    for i in range(20):
-        total_monthly_wage += cal_emp_daily_wage()
-    print(f"Monthly wage of an employee is: {total_monthly_wage}")
+    total_working_hr = 0
+    total_working_days = 0
+    
+    while total_working_hr < 100 and total_working_days <20:
+        each_day_working_hr, daily_wage = cal_emp_daily_wage()
+        total_working_days += 1
+        total_working_hr += each_day_working_hr
+        total_monthly_wage += daily_wage
+    
+    print(f"Monthly wage till a condition of total working hours or days reached is: {total_monthly_wage}")
+         
         
-
 def cal_emp_daily_wage():
 	emp_check = chk_attd()
 	if emp_check == 1:
@@ -24,14 +31,13 @@ def cal_emp_daily_wage():
 	match work_type:
 		case "full_time":
 			daily_wage = wage_per_hr*full_day_hr
-			return daily_wage
+			return full_day_hr, daily_wage
 		case "part_time":
 			daily_wage = wage_per_hr*part_time_hr
-			return daily_wage
+			return part_time_hr, daily_wage
 		case "absent":
 			daily_wage = 0
-			return daily_wage
-		
+			return 0, daily_wage
 
 if __name__ == "__main__":
-	monthly_wage()
+    monthly_wage()
