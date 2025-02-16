@@ -16,19 +16,11 @@ def chk_attd():
 def cal_emp_daily_wage():
     """
     Description:
-	This function is used to calculate the daily wage of an employee
-	Parameters:
-	None
-	Return:
-	The daily wage of an employee
-    """
-    """
-    Description:
-		
+		This function is used to calculate the daily wage of an employee
 	Parameters:
 		None
 	Return:
-		The daily wage of the employee.
+		The daily wage of the employee
     """
     emp_check = chk_attd()
     wage_per_hr = 20
