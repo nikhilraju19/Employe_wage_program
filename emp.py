@@ -30,6 +30,7 @@ def cal_emp_daily_wage():
     wage_per_hr = 20
     full_day_hr = 8
     part_time_hr = 4
+    
     # Use match to calculate the daily wage based on specific work type
     match work_type:
         case "full_time":
