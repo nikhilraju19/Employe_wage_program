@@ -53,6 +53,7 @@ def monthly_wage():
 		The monthly wage of the employee
     """  
     total_monthly_wage = 0
+    
     # Assume 20 Working Day per Month
     for i in range(20):
         total_monthly_wage += cal_emp_daily_wage()
